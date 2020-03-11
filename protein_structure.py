@@ -2,13 +2,13 @@
  model.py
     Deep learning Protein model
 '''
-from keras.models import Sequential, Input, Model
-from keras.layers import Dense,Dropout, Convolution2D, Convolution1D, Flatten, MaxPooling2D, MaxPooling1D
-from keras.layers.embeddings import Embedding
+from tensorflow.keras.models import Sequential, Input, Model
+from tensorflow.keras.layers import Dense,Dropout, Convolution2D, Convolution1D, Flatten, MaxPooling2D, MaxPooling1D
+from tensorflow.keras.layers.embeddings import Embedding
 import matplotlib.pyplot as plt
 
-from keras.losses import logcosh
-from keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.losses import logcosh
+from tensorflow.keras.preprocessing.sequence import pad_sequences
 from GUtils.data_loader import shuffle_and_split, load_data, fetch_data, load_data2, load_json_dataset
 from GUtils.global_utils import Struct, protein_seq_2oneHot, generate_weights, LossRatioLogger, rmsd, chi2
 import keras
